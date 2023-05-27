@@ -2,7 +2,7 @@
 
 ## Installation
 
-This will do a bare clone of this repo, setup the `config` alias, and backup and replace any existing config to `~/.config-backup`
+This will do a bare clone of this repo, setup the `conf` alias, and backup and replace any existing config to `~/.config-backup`
 
 > NOTE: To run this you need `curl` and `git` to be installed
 
