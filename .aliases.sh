@@ -2,7 +2,13 @@
 # Setup bare git repo alias
 alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-if command -v nvim &> /dev/null
+# This pattern is used a lot so we set it up here
+# to make the config more readable
+function commandExists {
+  command -v $1 &> /dev/null
+}
+
+if commandExists nvim
 then
   # No output during sourcing
   # https://neovim.io/
@@ -10,7 +16,7 @@ then
   alias vim=nvim
 fi
 
-if command -v bat &> /dev/null
+if commandExists bat
 then
   # No output during sourcing
   # https://github.com/sharkdp/bat
@@ -18,7 +24,7 @@ then
   alias cat=bat
 fi
 
-if command -v exa &> /dev/null
+if commandExists exa
 then
   # No output during sourcing
   # https://github.com/ogham/exa
