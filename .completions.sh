@@ -6,7 +6,7 @@ fi
 
 ## Setup completions if they don't exist yet
 # Add completion for pnpm if pnpm is installed
-if commandExists pnpm && [ ! -d "$HOME/.config/tabtab/zsh/__tabtab.zsh" ]
+if commandExists pnpm && [ ! -f "$HOME/.config/tabtab/zsh/__tabtab.zsh" ]
 then
   pnpm install-completion zsh
 fi
