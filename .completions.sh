@@ -1,5 +1,5 @@
 ## Create completions directory if it doesn't exist yet
-if [ -d "$HOME/.zfunc" ]
+if [ ! -d "$HOME/.zfunc" ]
 then
   mkdir "$HOME/.zfunc/"
 fi
