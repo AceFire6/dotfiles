@@ -13,26 +13,24 @@ commandExists() {
   command -v "$1" > /dev/null 2>&1
 }
 
-if commandExists nvim
-then
+if commandExists nvim; then
   # No output during sourcing
   # https://neovim.io/
   # echo "nvim installed - aliasing vim=>nvim"
   alias vim=nvim
 fi
 
-if commandExists bat
-then
+if commandExists bat; then
   # No output during sourcing
   # https://github.com/sharkdp/bat
   # echo "bat installed - aliasing cat=>bat"
   alias cat=bat
 fi
 
-if commandExists exa
-then
+if commandExists exa; then
   # No output during sourcing
   # https://github.com/ogham/exa
   # echo "exa installed - aliasing ls=>exa"
   alias ls=exa
+  alias la='exa -la'
 fi

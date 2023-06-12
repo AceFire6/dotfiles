@@ -24,7 +24,7 @@
   autoCorrect = prompt
 
 # Commit signing is done using ssh
-# It was set up following this guide: 
+# It was set up following this guide:
 # https://developer.1password.com/docs/ssh/git-commit-signing/
 [gpg]
 	format = ssh
