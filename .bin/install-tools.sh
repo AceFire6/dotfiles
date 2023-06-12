@@ -31,6 +31,8 @@ tools=(
  neovim
  # https://github.com/mozilla/sccache
  sccache
+ # https://pre-commit.com/
+ pre-commit
 )
 echo "Installing tools"
 brew install "${tools[@]}"
