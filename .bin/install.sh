@@ -2,7 +2,7 @@
 git clone --bare git@github.com:AceFire6/dotfiles.git "$HOME/.cfg"
 
 function conf {
-  /usr/bin/git --git-dir="$HOME/.cfg/" --work-tree="$HOME" "$@"
+  git --git-dir="$HOME/.cfg/" --work-tree="$HOME" "$@"
 }
 
 mkdir -p .config-backup
