@@ -1,5 +1,11 @@
 # dotfiles for @AceFire6
 
+## pre-commit
+
+This repository uses [pre-commit](https://pre-commit.com/) to lint for `yaml` and `sh` files.
+
+The installation will ensure `pre-commit install` is called to set up the git hooks.
+
 ## Installation
 
 ### dotfiles Installation
