@@ -1,4 +1,9 @@
 #!/bin/bash
+# Configure dotfile management using git
+# Usage:
+#   dotfile git status
+#   dotfile pre-commit run -a
+alias dotfile='GIT_DIR=$HOME/.cfg/ GIT_WORK_TREE=$HOME'
 # Setup bare git repo alias
 alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
