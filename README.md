@@ -4,7 +4,8 @@
 
 ### dotfiles Installation
 
-This will do a bare clone of this repo, setup the `conf` alias, and backup and replace any existing config to `~/.config-backup`
+This will do a bare clone of this repo, setup the `conf` and `dotfile` alias, and backup and
+replace any existing config to `~/.config-backup`.
 
 > NOTE: To run this you need `curl` and `git` to be installed
 
@@ -22,8 +23,10 @@ bash "$HOME/.bin/install-tools.sh"
 
 #### Tools
 
-* git
+* [git](https://github.com/git/git)
 * [gh](https://cli.github.com/)
+* [go](https://go.dev/)
+* [shfmt](https://github.com/mvdan/sh#shfmt)
 * [exa](https://github.com/ogham/exa)
 * [bat](https://github.com/sharkdp/bat)
 * [fzf](https://github.com/junegunn/fzf)
@@ -31,6 +34,8 @@ bash "$HOME/.bin/install-tools.sh"
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [jq](https://github.com/stedolan/jq)
 * [sccache](https://github.com/mozilla/sccache)
+* [shellcheck](https://github.com/koalaman/shellcheck)
+* [pre-commit](https://pre-commit.com/)
 * [jetbrains-toolbox](https://www.jetbrains.com/toolbox-app/) - this lets me install Jetbrains IDEs
 * [fig](https://fig.io/)
 * [docker](https://www.docker.com/)
