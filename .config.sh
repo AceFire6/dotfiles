@@ -1,3 +1,4 @@
+#!/bin/bash
 # This helps with caching of dependencies that need to 
 # build during installation from source
 # https://github.com/mozilla/sccache

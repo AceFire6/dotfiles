@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 # Setup bare git repo alias
 alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # This pattern is used a lot so we set it up here
 # to make the config more readable
-function commandExists {
-  command -v $1 &> /dev/null
+commandExists() {
+  command -v "$1" > /dev/null 2>&1
 }
 
 if commandExists nvim
@@ -28,6 +28,6 @@ if commandExists exa
 then
   # No output during sourcing
   # https://github.com/ogham/exa
-  # echo "exa installed - aliasing exa=>bat"
+  # echo "exa installed - aliasing ls=>exa"
   alias ls=exa
 fi

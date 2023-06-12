@@ -1,3 +1,4 @@
+#!/bin/bash
 ## Create completions directory if it doesn't exist yet
 if [ ! -d "$HOME/.zfunc" ]
 then
@@ -21,4 +22,10 @@ fi
 if commandExists gh && [ ! -d "$HOME/.zfunc/_gh" ]
 then
   gh completion -s zsh > "$HOME/.zfunc/_gh"
+fi
+
+# Add custom completions to fpath
+if [ -n "$fpath" ]
+then
+  fpath=( ~/.zfunc "${fpath[@]}" )
 fi
