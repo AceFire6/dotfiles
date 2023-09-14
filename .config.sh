@@ -10,3 +10,6 @@ fi
 if commandExists pre-commit; then
   dotfile pre-commit install > /dev/null 2>&1
 fi
+
+export VISUAL=vim
+export EDITOR=vim
