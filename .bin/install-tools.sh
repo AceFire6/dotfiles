@@ -6,6 +6,12 @@ if ! command -v brew; then
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+install_rustup() {
+  echo "Installing rustup"
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+}
+rustup || install_rustup
+
 # Extra taps
 brew tap homebrew/cask-fonts
 
