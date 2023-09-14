@@ -44,9 +44,67 @@ tools=(
   shellcheck
   # https://pre-commit.com/
   pre-commit
+  # https://github.com/hashicorp/terraform
+  terraform
 )
 echo "Installing tools"
 brew install "${tools[@]}"
+
+null_ls_brew_tools=(
+  # https://github.com/rhysd/actionlint/tree/main
+  actionlint
+  # https://github.com/golangci/golangci-lint
+  golangci-lint
+  # https://github.com/hadolint/hadolint
+  hadolint
+  # https://github.com/koalaman/shellcheck
+  shellcheck
+  # https://github.com/aquasecurity/tfsec
+  tfsec
+  # https://github.com/htacg/tidy-html5
+  tidy-html5
+  # https://github.com/adrienverge/yamllint
+  yamllint
+  # https://github.com/incu6us/goimports-reviser
+  incu6us/homebrew-tap/goimports-reviser
+)
+null_ls_npm_tools=(
+  # cspell: https://cspell.org/docs/installation/
+  cspell
+  # eslint_d: https://github.com/mantoni/eslint_d.js
+  eslint_d
+  # markdownlint: https://github.com/DavidAnson/markdownlint
+  markdownlint
+  # @taplo/cli: https://github.com/tamasfe/taplo
+  @taplo/cli
+  # https://github.com/avencera/rustywind
+  rustywind
+)
+
+null_ls_go_tools=(
+  # https://github.com/fatih/gomodifytags
+  github.com/fatih/gomodifytags@latest
+  # https://github.com/josharian/impl
+  github.com/josharian/impl@latest
+  # https://github.com/mvdan/gofumpt
+  mvdan.cc/gofumpt@latest
+)
+
+echo "Installing null-ls npm tools"
+pnpm install -g "${null_ls_npm_tools[@]}"
+
+echo "Installing null-ls Go tools"
+go install "${null_ls_go_tools[@]}"
+
+echo "Installing null-ls Brew tools"
+brew install "${null_ls_brew_tools[@]}"
+
+echo "Installing null-ls Rust tools"
+rustup component add rustfmt
+
+echo "Installing null-ls python tools"
+# https://github.com/lyz-code/yamlfix
+pip install yamlfix
 
 casks=(
   docker
