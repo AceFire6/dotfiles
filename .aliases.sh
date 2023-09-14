@@ -9,8 +9,11 @@ alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # This pattern is used a lot so we set it up here
 # to make the config more readable
+silently() {
+  "$@" > /dev/null 2>&1
+}
 commandExists() {
-  command -v "$1" > /dev/null 2>&1
+  silently command -v "$1"
 }
 
 if commandExists nvim; then
