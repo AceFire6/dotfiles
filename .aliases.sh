@@ -31,6 +31,6 @@ if commandExists exa; then
   # No output during sourcing
   # https://github.com/ogham/exa
   # echo "exa installed - aliasing ls=>exa"
-  alias ls=exa
-  alias la='exa -la'
+  alias ls=eza
+  alias la='eza -la'
 fi

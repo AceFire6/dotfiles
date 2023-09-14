@@ -18,8 +18,8 @@ tools=(
   go
   # shell formatting tool: https://github.com/mvdan/sh#shfmt
   shfmt
-  # https://github.com/ogham/exa
-  exa
+  # https://github.com/eza-community/eza
+  eza
   # https://github.com/sharkdp/bat
   bat
   # https://github.com/junegunn/fzf
