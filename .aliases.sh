@@ -30,10 +30,10 @@ if commandExists bat; then
   alias cat=bat
 fi
 
-if commandExists exa; then
+if commandExists eza; then
   # No output during sourcing
-  # https://github.com/ogham/exa
-  # echo "exa installed - aliasing ls=>exa"
+  # https://github.com/eza-community/eza
+  # echo "eza installed - aliasing ls=>eza"
   alias ls=eza
   alias la='eza -la'
 fi
