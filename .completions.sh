@@ -23,4 +23,11 @@ fi
 # Add custom completions to fpath
 if [ -n "$fpath" ]; then
   fpath=(~/.zfunc "${fpath[@]}")
+else
+  echo "No fpath set already"
+  fpath=(~/.zfunc)
+fi
+
+if commandExists brew && [ -d "$(brew --prefix)/share/zsh/site-functions" ]; then
+  fpath=("$(brew --prefix)/share/zsh/site-functions" "${fpath[@]}")
 fi
